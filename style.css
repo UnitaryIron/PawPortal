@@ -1,0 +1,77 @@
+/* Mobile-First Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-btn {
+  margin: 10px 0;
+  width: 80%;
+  max-width: 250px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Email Auth Form */
+#email-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+#email-auth input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.social-auth {
+  margin-top: 20px;
+  text-align: center;
+}
+/* Add more styles for pet cards, search results, etc. */

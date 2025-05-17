@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetConnect</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Welcome Popup (hidden after login) -->
+    <div id="welcome-popup" class="popup">
+      <div class="popup-content">
+        <h2>Welcome to PetConnect! 🐾</h2>
+        <button id="continue-btn">Continue</button>
+      </div>
+    </div>
+
+    <!-- Replace the Auth Screen section with this -->
+    <div id="auth-screen" class="screen">
+      <h1>Sign In</h1>
+
+      <!-- Email/Password Form -->
+      <div id="email-auth">
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+        <button id="email-login">Sign In</button>
+        <button id="email-signup">Create Account</button>
+        <p id="auth-error" class="error"></p>
+      </div>
+
+      <!-- Social Auth -->
+      <div class="social-auth">
+        <p>Or sign in with:</p>
+        <button id="google-login" class="auth-btn">Google</button>
+        <button id="facebook-login" class="auth-btn">Facebook</button>
+      </div>
+    </div>
+
+    <!-- Main App (hidden until login) -->
+    <div id="app" class="screen hidden">
+      <!-- Pet Profile Section -->
+      <section id="pet-profiles">
+        <h2>My Pets</h2>
+        <form id="pet-form">
+          <input type="text" id="pet-name" placeholder="Pet Name" required />
+          <input type="text" id="pet-breed" placeholder="Breed" />
+          <button type="submit">Save</button>
+        </form>
+        <div id="pets-list"></div>
+      </section>
+
+      <!-- Search Section -->
+      <section id="search">
+        <input type="text" id="city-search" placeholder="Search by city..." />
+        <div id="results"></div>
+      </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
