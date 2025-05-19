@@ -22,20 +22,23 @@ const googleLoginBtn = document.getElementById('google-login');
 const facebookLoginBtn = document.getElementById('facebook-login');
 
 googleLoginBtn.addEventListener('click', () => signInWithGoogle());
-facebookLoginBtn.addEventListener('click', () => signInWithFacebook());
 
-// Google Sign-In
+// Google Sign-In with reCAPTCHA check
 function signInWithGoogle() {
+  const recaptchaResponse = grecaptcha.getResponse();
+
+  if (!recaptchaResponse) {
+    alert("Please complete the reCAPTCHA before signing in.");
+    return;
+  }
+
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
-    .then(() => showApp())
-    .catch(console.error);
-}
-
-function signInWithFacebook() {
-  const provider = new firebase.auth.FacebookAuthProvider();
-  auth.signInWithPopup(provider)
-    .then(() => showApp())
+    .then(() => {
+      // Optional: reset the reCAPTCHA if needed
+      grecaptcha.reset();
+      showApp();
+    })
     .catch(console.error);
 }
 
