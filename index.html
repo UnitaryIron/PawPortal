@@ -18,72 +18,11 @@
         <button id="continue-btn">Continue</button>
       </div>
     </div>
-    <!-- Replace the Auth Screen section with this -->
-   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <h1 style="text-align: center;">Sign In</h1>
+    <style>.g-recaptcha { display: block; margin: 0 auto; }</style>
+<div class="g-recaptcha" data-sitekey="6Lf7mD8rAAAAABciFl0k1poz0gxcn36uVDVMMhoy"></div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    .container {
-      text-align: center;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    .google-btn {
-      background-color: #4285F4;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-
-    .google-btn:hover {
-      background-color: #357ae8;
-    }
-
-    .sign-in-btn {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-bottom: 20px;
-      cursor: pointer;
-    }
-
-    .g-recaptcha {
-      display: inline-block;
-    }
-  </style>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
-
-  <div class="container">
-    <h1>Sign In</h1>
-
-    <!-- Google Sign In button -->
-    <button class="google-btn">Sign in with Google</button>
-
-    <!-- Normal Sign In button -->
-    <br>
-    <button class="sign-in-btn">Sign In</button>
-
-    <!-- reCAPTCHA widget below Sign In button -->
-    <div class="g-recaptcha" data-sitekey="6Lf7mD8rAAAAABciFl0k1poz0gxcn36uVDVMMhoy"></div>
-  </div>
       <!-- Social Auth -->
       <div class="social-auth">
         <button id="google-login" class="auth-btn">Google</button>
