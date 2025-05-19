@@ -41,28 +41,16 @@ button {
 
 .auth-btn {
   margin: 10px 0;
-  width: 80%;
-  max-width: 250px;
+  width: 90%;
+  max-width: 300px;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: 600;
 }
+
 
 .hidden {
   display: none !important;
-}
-
-/* Email Auth Form */
-#email-auth {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 80%;
-  max-width: 300px;
-  margin: 20px auto;
-}
-
-#email-auth input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
 }
 
 .error {
