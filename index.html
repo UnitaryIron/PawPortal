@@ -18,10 +18,15 @@
         <button id="continue-btn">Continue</button>
       </div>
     </div>
+    <style>
+    .container {
+      text-align: center; /* Centers inline/inline-block elements like h1 and reCAPTCHA */
+      margin-top: 50px;
+    }
 
-    <div class="g-recaptcha" data-sitekey="6Lf7mD8rAAAAABciFl0k1poz0gxcn36uVDVMMhoy"></div>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
+    .g-recaptcha {
+      display: inline-block; /* Needed to allow text-align:center to work */
+    }
     <!-- Replace the Auth Screen section with this -->
     <div id="auth-screen" class="screen">
       <h1 style="text-align: center;">Sign In</h1>
