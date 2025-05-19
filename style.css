@@ -74,4 +74,10 @@ button {
   margin-top: 20px;
   text-align: center;
 }
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 /* Add more styles for pet cards, search results, etc. */
