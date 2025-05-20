@@ -10,119 +10,78 @@ body {
   min-height: 100vh; /* Ensure full height of viewport */
 }
 
-#auth-screen {
-  flex-grow: 1; /* This makes the login screen take up the remaining space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#footer {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-  width: 100%;
-  margin-top: auto; /* Ensures it is pushed to the bottom of the screen */
-}
-
-#footer a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-#footer a:hover {
-  text-decoration: underline;
-}
-
-#footer p {
-  margin: 5px 0;
-}
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-.popup-content {
-  background: #fff;
+#app-content {
+  flex-grow: 1;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
-  width: 80%;
-  max-width: 300px;
-}
-
-button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.auth-btn {
-  margin: 10px 0;
-  width: 90%;
-  max-width: 300px;
-  padding: 14px 20px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.error {
-  color: red;
-  font-size: 14px;
-}
-
-.social-auth {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.recaptcha-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 10px 0 20px;
+  font-size: 18px;
 }
 
 #buttons-container {
-  position: fixed;
-  bottom: 1px; /* Adjust the distance from the bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Center the buttons horizontally */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.button-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 90%; /* Adjust width if needed */
-  max-width: 600px; /* Max width for buttons */
-  z-index: 10; /* Ensure the buttons are above other content */
+  justify-content: center;
 }
 
 button {
   background: #4CAF50;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  flex: 1; /* Make buttons stretch to fill the available space */
-  margin: 0 5px; /* Space between buttons */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button span {
+  font-size: 20px;
+}
+
+#profile-btn-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#profile-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#profile-btn:hover {
+  background: #45a049;
 }
