@@ -43,7 +43,7 @@ function signInWithGoogle() {
       localStorage.setItem('user', JSON.stringify(user));  // Save user data to localStorage
 
       // Redirect to the dashboard after successful login
-      window.location.href = 'dashboard.html';
+      window.location.href = 'app.html';
     })
     .catch((error) => {
       console.error("Error signing in: ", error.message);
