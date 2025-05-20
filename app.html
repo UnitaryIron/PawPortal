@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,12 +17,37 @@
 
     <!-- Main Content -->
     <div id="app-content">
-      <h2>Welcome to PawPortal!</h2>
+      <h2>Welcome!</h2>
+      <p>What would you like to do today?</p>
+
       <div id="buttons-container">
-        <button id="button2">Button 2</button>
-        <button id="button3">Button 3</button>
-        <button id="button4">Button 4</button>
-        <button id="profile-btn">Profile</button>
+        <div class="button-wrapper">
+          <button id="button1">
+            <span role="img" aria-label="search">🔍</span> Book Appointment
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <button id="button2">
+            <span role="img" aria-label="pet">🐾</span> Pet Profile
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <button id="button3">
+            <span role="img" aria-label="calendar">📅</span> History
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <button id="button4">
+            <span role="img" aria-label="emergency">🆘</span> Emergency
+          </button>
+        </div>
+      </div>
+
+      <!-- Profile button in top-right corner -->
+      <div id="profile-btn-container">
+        <button id="profile-btn">
+          <span role="img" aria-label="profile">👤</span>
+        </button>
       </div>
     </div>
 
