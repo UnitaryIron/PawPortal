@@ -68,4 +68,31 @@ button {
   margin-top: 20px;
 }
 
+/* Footer Styles */
+#footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+#footer p {
+  margin: 5px 0;
+}
+
+
 /* Add more styles for pet cards, search results, etc. */
