@@ -1,54 +1,182 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PawPortal</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Embedded CSS from app.css */
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f5f5;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      #app-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      #buttons-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 40px;
+      }
+
+      #buttons-container button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 16px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      #buttons-container button:hover {
+        background: #45a049;
+      }
+
+      #profile-btn-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      #profile-btn {
+        background: #4CAF50;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      #profile-btn:hover {
+        background: #45a049;
+      }
+
+      /* Optional: Future login screen or popup styling */
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
+
+      .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 80%;
+        max-width: 300px;
+      }
+
+      .auth-btn {
+        margin: 10px 0;
+        width: 90%;
+        max-width: 300px;
+        padding: 14px 20px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+
+      .social-auth {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .recaptcha-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
 
     <!-- Main Content -->
     <div id="app-content">
-      <h2>Welcome!</h2>
-      <p>What would you like to do today?</p>
-
-      <div id="buttons-container">
-        <div class="button-wrapper">
-          <button id="button1">
-            <span role="img" aria-label="search">🔍</span> Book Appointment
-          </button>
-        </div>
-        <div class="button-wrapper">
-          <button id="button2">
-            <span role="img" aria-label="pet">🐾</span> Pet Profile
-          </button>
-        </div>
-        <div class="button-wrapper">
-          <button id="button3">
-            <span role="img" aria-label="calendar">📅</span> History
-          </button>
-        </div>
-        <div class="button-wrapper">
-          <button id="button4">
-            <span role="img" aria-label="emergency">🆘</span> Emergency
-          </button>
-        </div>
-      </div>
-
       <!-- Profile button in top-right corner -->
       <div id="profile-btn-container">
         <button id="profile-btn">
           <span role="img" aria-label="profile">👤</span>
         </button>
       </div>
+
+      <h2>Welcome, [Name]!</h2>
+      <p>What would you like to do today?</p>
+
+      <div id="buttons-container">
+        <button id="button1">
+          <span role="img" aria-label="calendar">📅</span> Book Appointment
+        </button>
+        <button id="button2">
+          <span role="img" aria-label="pet">🐾</span> Pet Profile
+        </button>
+        <button id="button3">
+          <span role="img" aria-label="history">📋</span> History
+        </button>
+        <button id="button4">
+          <span role="img" aria-label="emergency">🚨</span> Emergency
+        </button>
+      </div>
     </div>
 
+    <!-- Firebase & App Logic Scripts -->
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
     <script type="module" src="firebase.js"></script>
     <script type="module" src="app.js"></script>
+
   </body>
 </html>
