@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawPortal - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Profile Header -->
+    <header>
+      <div class="profile-container">
+        <img id="profile-img" class="profile-img" src="" alt="Profile Picture" />
+      </div>
+    </header>
+
+    <div id="profile-content">
+      <h2>Edit Your Profile</h2>
+      <form id="profile-form">
+        <label for="photo-upload">Upload Pet Photo</label>
+        <input type="file" id="photo-upload" accept="image/*" required />
+        
+        <label for="pet-name">Pet Name</label>
+        <input type="text" id="pet-name" placeholder="Enter your pet's name" required />
+        
+        <label for="pet-breed">Breed</label>
+        <input type="text" id="pet-breed" placeholder="Enter your pet's breed" required />
+        
+        <label for="pet-kind">Kind</label>
+        <input type="text" id="pet-kind" placeholder="Enter your pet's kind" required />
+        
+        <button type="submit">Save</button>
+      </form>
+      <button id="close-profile-btn">Cancel</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="profile.js"></script>
+  </body>
+</html>
