@@ -1,71 +1,39 @@
-/* Mobile-First Styles */
+/* General page settings */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   background: #f5f5f5;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure full height of viewport */
+  min-height: 100vh;
 }
 
-#app-content {
+/* LOGIN SCREEN */
+#auth-screen {
   flex-grow: 1;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* HOME SCREEN */
+#app-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
+  padding-top: 80px; /* space for profile button */
+  text-align: center;
 }
 
-h2 {
-  margin: 0;
-  font-size: 24px;
-}
-
-p {
-  margin: 10px 0 20px;
-  font-size: 18px;
-}
-
-#buttons-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-button span {
-  font-size: 20px;
-}
-
+/* PROFILE BUTTON in top-right corner */
 #profile-btn-container {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 10;
 }
 
 #profile-btn {
@@ -78,10 +46,34 @@ button span {
   cursor: pointer;
 }
 
-button:hover {
-  background: #45a049;
+/* BUTTON GRID */
+#buttons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
 }
 
-#profile-btn:hover {
-  background: #45a049;
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none !important;
 }
