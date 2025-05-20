@@ -1,6 +1,6 @@
 // Import necessary Firebase modules
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
-import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
 import { getStorage } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js';
 
@@ -23,4 +23,4 @@ const firestore = getFirestore(app);
 const storage = getStorage(app);
 
 // Export Firebase services
-export { auth, firestore, storage };
+export { auth, GoogleAuthProvider, signInWithPopup, firestore, storage };
