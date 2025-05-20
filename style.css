@@ -102,3 +102,27 @@ button {
   justify-content: center;
   margin-top: 20px;
 }
+
+#buttons-container {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center the buttons horizontally */
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* Adjust width if needed */
+  max-width: 600px; /* Max width for buttons */
+  z-index: 10; /* Ensure the buttons are above other content */
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1; /* Make buttons stretch to fill the available space */
+  margin: 0 5px; /* Space between buttons */
+}
