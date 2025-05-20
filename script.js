@@ -54,6 +54,6 @@ function signInWithGoogle() {
 auth.onAuthStateChanged(user => {
   if (user) {
     // If a user is already logged in, redirect to the dashboard page
-    window.location.href = 'dashboard.html';
+    window.location.href = 'app.html';
   }
 });
