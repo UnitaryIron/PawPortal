@@ -1,4 +1,5 @@
 import { auth, firestore } from './firebase.js';
+import { doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js'; // Import Firestore functions
 
 // DOM Elements
 const profileBtn = document.getElementById('profile-btn');
@@ -12,14 +13,19 @@ profileBtn.addEventListener('click', () => {
 // Check if user is signed in and load profile picture
 auth.onAuthStateChanged(async (user) => {
   if (user) {
-    const userDocRef = firestore.collection('users').doc(user.uid);
-    const doc = await userDocRef.get();
+    try {
+      // Use the correct Firestore method to get a document reference
+      const userDocRef = doc(firestore, 'users', user.uid);
+      const docSnap = await getDoc(userDocRef);
 
-    if (doc.exists) {
-      const userData = doc.data();
-      profileImg.src = userData.photoURL || user.photoURL || 'default-profile-pic.png';
-    } else {
-      profileImg.src = user.photoURL || 'default-profile-pic.png';
+      if (docSnap.exists()) {
+        const userData = docSnap.data();
+        profileImg.src = userData.photoURL || user.photoURL || 'default-profile-pic.png';
+      } else {
+        profileImg.src = user.photoURL || 'default-profile-pic.png';
+      }
+    } catch (error) {
+      console.error('Error fetching user data:', error);
     }
   }
 });
